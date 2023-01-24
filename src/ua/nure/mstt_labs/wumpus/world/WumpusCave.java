@@ -1,7 +1,5 @@
 package ua.nure.mstt_labs.wumpus.world;
 
-import ua.nure.mstt_labs.wumpus.services.WorldConfiguration;
-
 import java.util.HashMap;
 import java.util.Map;
 

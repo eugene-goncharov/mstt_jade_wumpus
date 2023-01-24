@@ -1,4 +1,4 @@
-package ua.nure.mstt_labs.wumpus.services;
+package ua.nure.mstt_labs.wumpus.configs;
 
 /**
  * @author Eugene Goncharov

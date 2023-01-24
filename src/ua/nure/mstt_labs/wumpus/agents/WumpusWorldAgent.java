@@ -5,7 +5,7 @@ import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
-import ua.nure.mstt_labs.wumpus.services.WorldConfiguration;
+import ua.nure.mstt_labs.wumpus.configs.WorldConfiguration;
 import ua.nure.mstt_labs.wumpus.world.AgentPosition;
 import ua.nure.mstt_labs.wumpus.world.WumpusCave;
 
@@ -17,8 +17,7 @@ public class WumpusWorldAgent extends Agent {
     private AgentPosition agentPosition;
 
     public WumpusWorldAgent() {
-        this.cave = new WumpusCave(4, 4,
-                WorldConfiguration.DEFAULT_CAVE_CONFIGURATION);
+        this.cave = new WumpusCave();
     }
 
     @Override
@@ -32,6 +31,7 @@ public class WumpusWorldAgent extends Agent {
         serviceDescription.setType(WorldConfiguration.WUMPUS_WORLD_TYPE);
         serviceDescription.setName(WorldConfiguration.WUMPUS_WORLD_AGENT_SERVICE_DESCRIPTION);
         agentDescription.addServices(serviceDescription);
+        
         try {
             DFService.register(this, agentDescription);
         } catch (FIPAException fe) {
