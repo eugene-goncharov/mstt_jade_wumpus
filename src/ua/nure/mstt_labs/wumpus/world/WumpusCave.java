@@ -1,39 +1,45 @@
 package ua.nure.mstt_labs.wumpus.world;
 
+import ua.nure.mstt_labs.wumpus.services.WorldConfiguration;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author Eugene Goncharov
  */
-
-import ua.nure.mstt_labs.wumpus.services.WorldConfiguration;
-
 public class WumpusCave {
-
-    private final int caveXDimension;
-    private final int caveYDimension;
-
-    private AgentPosition start = new AgentPosition(1, 1, Orientation.NORTH);
+    private final Map<Position, Room> map;
+    private AgentPosition currentAgentPosition;
 
     public WumpusCave() {
-        this(4, 4);
+
+        Position startPosition = new Position(1, 1);
+        this.currentAgentPosition = new AgentPosition(startPosition, Orientation.NORTH);
+        this.map = new HashMap<>();
+
+        this.map.put(startPosition, new Room(RoomContent.EMTPY));
+        this.map.put(new Position(1, 2), new Room(RoomContent.BREEZE));
+        this.map.put(new Position(1, 3), new Room(RoomContent.PIT));
+        this.map.put(new Position(1, 4), new Room(RoomContent.BREEZE));
+
+        this.map.put(new Position(2, 1), new Room(RoomContent.STENCH));
+        this.map.put(new Position(2, 2), new Room(RoomContent.EMTPY));
+        this.map.put(new Position(2, 3), new Room(RoomContent.BREEZE));
+        this.map.put(new Position(2, 4), new Room(RoomContent.EMTPY));
+
+        this.map.put(new Position(3, 1), new Room(RoomContent.WUMPUS));
+        this.map.put(new Position(3, 2), new Room(RoomContent.STENCH));
+        this.map.put(new Position(3, 3), new Room(RoomContent.EMTPY));
+        this.map.put(new Position(3, 4), new Room(RoomContent.BREEZE));
+
+        this.map.put(new Position(4, 1), new Room(RoomContent.STENCH));
+        this.map.put(new Position(4, 2), new Room(RoomContent.EMTPY));
+        this.map.put(new Position(4, 3), new Room(RoomContent.BREEZE));
+        this.map.put(new Position(4, 4), new Room(RoomContent.PIT));
     }
 
-    public WumpusCave(int caveXDimension, int caveYDimension) {
-        if (caveXDimension < WorldConfiguration.MIN_DIMENSION || caveYDimension < WorldConfiguration.MIN_DIMENSION)
-            throw new IllegalArgumentException("Cave size must have at least 1 dimension");
-
-        this.caveXDimension = caveXDimension;
-        this.caveYDimension = caveYDimension;
-    }
-
-    public int getCaveXDimension() {
-        return caveXDimension;
-    }
-
-    public int getCaveYDimension() {
-        return caveYDimension;
-    }
-
-    public AgentPosition getStart() {
-        return start;
+    public AgentPosition getCurrentAgentPosition() {
+        return currentAgentPosition;
     }
 }

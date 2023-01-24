@@ -1,47 +1,31 @@
 package ua.nure.mstt_labs.wumpus.world;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Eugene Goncharov
  */
 public final class Room {
-    private int x = 1;
-    private int y = 1;
+    private final RoomContent content;
 
-    public Room(int x, int y) {
-        this.x = x;
-        this.y = y;
+    public Room(RoomContent content) {
+        this.content = content;
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    @Override
-    public String toString() {
-        return "[" + x + "," + y + "]";
+    public RoomContent getContent() {
+        return content;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (o != null && o instanceof Room) {
-            Room r = (Room) o;
-            return x == r.x && y == r.y;
-        }
-        return false;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        final Room room = (Room) o;
+        return content == room.content;
     }
 
     @Override
     public int hashCode() {
-        int result = 17;
-        result = 37 * result + getX();
-        result = 43 * result + getY();
-        return result;
+        return Objects.hash(content);
     }
 }

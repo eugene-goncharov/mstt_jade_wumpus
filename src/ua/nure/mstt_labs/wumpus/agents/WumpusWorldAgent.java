@@ -6,11 +6,20 @@ import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
 import ua.nure.mstt_labs.wumpus.services.WorldConfiguration;
+import ua.nure.mstt_labs.wumpus.world.AgentPosition;
+import ua.nure.mstt_labs.wumpus.world.WumpusCave;
 
 /**
  * @author Eugene Goncharov
  */
 public class WumpusWorldAgent extends Agent {
+    private WumpusCave cave;
+    private AgentPosition agentPosition;
+
+    public WumpusWorldAgent() {
+        this.cave = new WumpusCave(4, 4,
+                WorldConfiguration.DEFAULT_CAVE_CONFIGURATION);
+    }
 
     @Override
     protected void setup() {
@@ -28,5 +37,15 @@ public class WumpusWorldAgent extends Agent {
         } catch (FIPAException fe) {
             fe.printStackTrace();
         }
+    }
+
+    @Override
+    protected void takeDown() {
+        try {
+            DFService.deregister(this);
+        } catch (FIPAException fe) {
+            fe.printStackTrace();
+        }
+        System.out.println("Agent " + getAID().getName() + " shutting down.");
     }
 }
