@@ -1,10 +1,10 @@
-package ua.nure.mstt_labs.wumpus.behaviours;
+package ua.nure.mstt_labs.wumpus.behaviours.world;
 
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import ua.nure.mstt_labs.wumpus.actions.ActionResult;
-import ua.nure.mstt_labs.wumpus.actions.Actions;
+import ua.nure.mstt_labs.wumpus.actions.ActionType;
 import ua.nure.mstt_labs.wumpus.agents.WumpusWorldAgent;
 import ua.nure.mstt_labs.wumpus.configs.MessagesConfig;
 
@@ -24,23 +24,23 @@ public class WumpusWorldCoreGameLoop extends CyclicBehaviour {
 
         if (msg != null) {
             final WumpusWorldAgent agent = (WumpusWorldAgent) myAgent;
-            String message = msg.getContent();
+            String messageContent = msg.getContent();
             System.out.println(myAgent.getName() + ": Current state:");
 
             boolean sendTerminateMessage = false;
             boolean sendWinMessage = false;
 
-            switch (message) {
-                case MessagesConfig.SPELEOLOGIST_TURN_LEFT -> agent.doAction(Actions.TURN_LEFT);
-                case MessagesConfig.SPELEOLOGIST_TURN_RIGHT -> agent.doAction(Actions.TURN_RIGHT);
+            switch (messageContent) {
+                case MessagesConfig.SPELEOLOGIST_TURN_LEFT -> agent.doAction(ActionType.TURN_LEFT);
+                case MessagesConfig.SPELEOLOGIST_TURN_RIGHT -> agent.doAction(ActionType.TURN_RIGHT);
                 case MessagesConfig.SPELEOLOGIST_MOVE_FORWARD -> {
-                    ActionResult moveForwardResult = agent.doAction(Actions.MOVE_FORWARD);
+                    ActionResult moveForwardResult = agent.doAction(ActionType.MOVE_FORWARD);
                     sendTerminateMessage = !agent.isAgentAlive();
                 }
-                case MessagesConfig.SPELEOLOGIST_GRAB -> agent.doAction(Actions.GRAB);
-                case MessagesConfig.SPELEOLOGIST_SHOOT -> agent.doAction(Actions.SHOOT);
+                case MessagesConfig.SPELEOLOGIST_GRAB -> agent.doAction(ActionType.GRAB);
+                case MessagesConfig.SPELEOLOGIST_SHOOT -> agent.doAction(ActionType.SHOOT);
                 case MessagesConfig.SPELEOLOGIST_CLIMB -> {
-                    ActionResult climbResult = agent.doAction(Actions.CLIMB);
+                    ActionResult climbResult = agent.doAction(ActionType.CLIMB);
 
                     if (climbResult.isSuccessful())
                         sendWinMessage = true;

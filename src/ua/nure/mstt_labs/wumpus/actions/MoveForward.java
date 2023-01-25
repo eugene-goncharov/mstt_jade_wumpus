@@ -40,6 +40,6 @@ public class MoveForward implements Action {
             this.cave.getAgent().die();
         }
 
-        return null;
+        return ActionResult.OK;
     }
 }

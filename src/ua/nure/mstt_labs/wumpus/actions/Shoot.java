@@ -23,6 +23,6 @@ public class Shoot implements Action {
         }
 
 
-        return null;
+        return ActionResult.OK;
     }
 }

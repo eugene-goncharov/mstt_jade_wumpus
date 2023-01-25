@@ -14,4 +14,15 @@ public class MessagesConfig {
     public static final String SPELEOLOGIST_GRAB = "SPELEOLOGIST_GRAB";
     public static final String SPELEOLOGIST_SHOOT = "SPELEOLOGIST_SHOOT";
     public static final String SPELEOLOGIST_CLIMB = "SPELEOLOGIST_CLIMB";
+
+    public static final String WORLD_INFORMATION = "WORLD INFORMATION";
+
+    // Actions
+    public static final String ACTION_PROPOSAL1 = "You should ";
+    public static final String ACTION_PROPOSAL2 = "I think it is a good option to ";
+    public static final String ACTION_PROPOSAL3 = "Maybe you can ";
+
+    public static final String MESSAGE_LEFT = "turn left.";
+    public static final String MESSAGE_RIGHT = "turn right.";
+    public static final String MESSAGE_FORWARD = "move forward.";
 }

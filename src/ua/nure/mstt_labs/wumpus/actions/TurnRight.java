@@ -27,6 +27,6 @@ public class TurnRight implements Action {
         AgentPosition newPosition = new AgentPosition(agentPosition.getPosition(), orientation);
         cave.getAgent().setPosition(newPosition);
 
-        return null;
+        return ActionResult.OK;
     }
 }
