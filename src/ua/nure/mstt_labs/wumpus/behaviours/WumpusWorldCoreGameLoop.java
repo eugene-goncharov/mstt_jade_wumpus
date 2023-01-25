@@ -3,9 +3,9 @@ package ua.nure.mstt_labs.wumpus.behaviours;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
-import ua.nure.WumpusWorldAgent;
 import ua.nure.mstt_labs.wumpus.actions.ActionResult;
 import ua.nure.mstt_labs.wumpus.actions.Actions;
+import ua.nure.mstt_labs.wumpus.agents.WumpusWorldAgent;
 import ua.nure.mstt_labs.wumpus.configs.MessagesConfig;
 
 /**
@@ -35,7 +35,7 @@ public class WumpusWorldCoreGameLoop extends CyclicBehaviour {
                 case MessagesConfig.SPELEOLOGIST_TURN_RIGHT -> agent.doAction(Actions.TURN_RIGHT);
                 case MessagesConfig.SPELEOLOGIST_MOVE_FORWARD -> {
                     ActionResult moveForwardResult = agent.doAction(Actions.MOVE_FORWARD);
-                    sendTerminateMessage = !agent.isAlive();
+                    sendTerminateMessage = !agent.isAgentAlive();
                 }
                 case MessagesConfig.SPELEOLOGIST_GRAB -> agent.doAction(Actions.GRAB);
                 case MessagesConfig.SPELEOLOGIST_SHOOT -> agent.doAction(Actions.SHOOT);

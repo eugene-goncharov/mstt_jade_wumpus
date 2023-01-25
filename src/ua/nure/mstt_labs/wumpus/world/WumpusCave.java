@@ -8,15 +8,17 @@ import java.util.Map;
  */
 public class WumpusCave {
     private final Map<Position, Room> map;
-    private AgentPosition currentAgentPosition;
+    private Agent agent;
+    private boolean wumpusAlive = true;
 
     public WumpusCave() {
 
-        Position startPosition = new Position(1, 1);
-        this.currentAgentPosition = new AgentPosition(startPosition, Orientation.NORTH);
+        AgentPosition startPosition = new AgentPosition(new Position(1, 1), Orientation.NORTH);
+        this.agent = new Agent(startPosition);
+
         this.map = new HashMap<>();
 
-        this.map.put(startPosition, new Room(RoomContent.EMTPY));
+        this.map.put(startPosition.getPosition(), new Room(RoomContent.EMTPY));
         this.map.put(new Position(1, 2), new Room(RoomContent.BREEZE));
         this.map.put(new Position(1, 3), new Room(RoomContent.PIT));
         this.map.put(new Position(1, 4), new Room(RoomContent.BREEZE));
@@ -37,7 +39,41 @@ public class WumpusCave {
         this.map.put(new Position(4, 4), new Room(RoomContent.PIT));
     }
 
-    public AgentPosition getCurrentAgentPosition() {
-        return currentAgentPosition;
+    public Agent getAgent() {
+        return agent;
+    }
+
+    public Room getRoomAt(Position position) {
+        return this.map.get(position);
+    }
+
+    private Position getWumpusPosition() {
+        for (Map.Entry<Position, Room> mapEntry : this.map.entrySet()) {
+            if (mapEntry.getValue().getContent().equals(RoomContent.WUMPUS)) {
+                return mapEntry.getKey();
+            }
+        }
+
+        return null;
+    }
+
+    public boolean isFacingWumpus(AgentPosition agentPosition) {
+        Position pos = agentPosition.getPosition();
+        Position wumpusPosition = getWumpusPosition();
+
+        if (wumpusPosition != null) {
+            return switch (agentPosition.getOrientation()) {
+                case NORTH -> pos.getX() == wumpusPosition.getX() && pos.getY() < wumpusPosition.getY();
+                case SOUTH -> pos.getX() == wumpusPosition.getX() && pos.getY() > wumpusPosition.getY();
+                case EAST -> pos.getY() == wumpusPosition.getY() && pos.getX() < wumpusPosition.getX();
+                case WEST -> pos.getY() == wumpusPosition.getY() && pos.getX() > wumpusPosition.getX();
+            };
+        }
+
+        return false;
+    }
+
+    public void shootWumpus() {
+        this.wumpusAlive = false;
     }
 }
