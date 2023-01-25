@@ -25,7 +25,6 @@ public class WumpusWorldCoreGameLoop extends CyclicBehaviour {
         if (msg != null) {
             final WumpusWorldAgent agent = (WumpusWorldAgent) myAgent;
             String messageContent = msg.getContent();
-            System.out.println(myAgent.getName() + ": Current state:");
 
             boolean sendTerminateMessage = false;
             boolean sendWinMessage = false;
@@ -67,9 +66,8 @@ public class WumpusWorldCoreGameLoop extends CyclicBehaviour {
             } else {
                 reset();
                 reply.setContent(MessagesConfig.FAIL_MESSAGE);
+                myAgent.send(reply);
             }
-
-
         } else {
             block();
         }

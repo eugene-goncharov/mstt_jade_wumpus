@@ -34,4 +34,13 @@ public class Position {
     public int hashCode() {
         return Objects.hash(x, y);
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("[").append(x);
+        sb.append(",").append(y);
+        sb.append("]");
+        return sb.toString();
+    }
 }

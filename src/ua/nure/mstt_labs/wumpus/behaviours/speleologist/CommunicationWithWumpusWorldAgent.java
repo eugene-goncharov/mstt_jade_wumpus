@@ -33,7 +33,8 @@ public class CommunicationWithWumpusWorldAgent extends Behaviour {
                 cfp.setReplyWith("cfp" + System.currentTimeMillis());
 
                 myAgent.send(cfp);
-                mt = MessageTemplate.and(MessageTemplate.MatchConversationId(SpeleologistMessages.WUMPUS_WORLD_CONVERSATION_ID),
+                mt = MessageTemplate.and(
+                        MessageTemplate.MatchConversationId(SpeleologistMessages.WUMPUS_WORLD_CONVERSATION_ID),
                         MessageTemplate.MatchInReplyTo(cfp.getReplyWith()));
                 step = 1;
             }

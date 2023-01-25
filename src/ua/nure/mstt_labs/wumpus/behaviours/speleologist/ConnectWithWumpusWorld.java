@@ -2,6 +2,7 @@ package ua.nure.mstt_labs.wumpus.behaviours.speleologist;
 
 import jade.core.AID;
 import jade.core.behaviours.Behaviour;
+import jade.core.behaviours.CyclicBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
@@ -31,15 +32,16 @@ public class ConnectWithWumpusWorld extends Behaviour {
 
         try {
             DFAgentDescription[] result = DFService.search(myAgent, template);
+
             if (result != null && result.length > 0) {
                 final AID wumpusWorldAID = result[0].getName();
                 ((SpeleologistAgent) myAgent).connectWithWumpusWorldAgent(wumpusWorldAID);
                 myAgent.addBehaviour(new CommunicationWithWumpusWorldAgent((SpeleologistAgent) myAgent));
+                isDone = true;
             } else {
                 System.out.println(myAgent.getName() + ": no WumpusWorld agents are available.");
                 block();
             }
-            isDone = true;
         } catch (FIPAException e) {
             e.printStackTrace();
         }

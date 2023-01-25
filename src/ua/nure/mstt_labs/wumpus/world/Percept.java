@@ -16,6 +16,18 @@ public class Percept {
         stench = true;
     }
 
+    public void stenchIsClose() {
+        stench = true;
+    }
+
+    public void heardScream() {
+        scream = true;
+    }
+
+    public void breezeIsClose() {
+        breeze = true;
+    }
+
     public void pitIsClose() {
         breeze = true;
     }
@@ -30,6 +42,9 @@ public class Percept {
         if (stench)
             builder.append("It stinks in here, you know. ");
 
+        if(scream)
+            builder.append("Seems like I hear a scream. ");
+
         if (breeze)
             builder.append("A cold breeze is blowing hard. ");
 
@@ -38,4 +53,6 @@ public class Percept {
 
         return builder.toString();
     }
+
+
 }

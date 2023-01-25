@@ -36,8 +36,11 @@ public class MoveForward implements Action {
 
         cave.getAgent().setPosition(newPosition);
         final Room newRoom = cave.getRoomAt(newPosition.getPosition());
-        if (newRoom.getContent().equals(RoomContent.WUMPUS) || newRoom.getContent().equals(RoomContent.PIT)) {
+
+        if ((newRoom.getContent().equals(RoomContent.WUMPUS) && cave.isWumpusAlive())
+                || newRoom.getContent().equals(RoomContent.PIT)) {
             this.cave.getAgent().die();
+            return ActionResult.FAILED;
         }
 
         return ActionResult.OK;

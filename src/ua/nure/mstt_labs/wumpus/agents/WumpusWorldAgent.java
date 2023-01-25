@@ -110,8 +110,20 @@ public class WumpusWorldAgent extends Agent {
                 result.wumpusIsClose();
             }
 
+            if(this.cave.isFacingWumpus(agentPosition)){
+                result.heardScream();
+            }
+
             if (room.getContent().equals(RoomContent.PIT)) {
                 result.pitIsClose();
+            }
+
+            if (room.getContent().equals(RoomContent.BREEZE)) {
+                result.breezeIsClose();
+            }
+
+            if (room.getContent().equals(RoomContent.STENCH)) {
+                result.stenchIsClose();
             }
 
             if (room.getContent().equals(RoomContent.GOLD)) {

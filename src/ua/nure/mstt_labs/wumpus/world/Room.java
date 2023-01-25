@@ -28,4 +28,12 @@ public final class Room {
     public int hashCode() {
         return Objects.hash(content);
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("").append(content);
+        sb.append('}');
+        return sb.toString();
+    }
 }

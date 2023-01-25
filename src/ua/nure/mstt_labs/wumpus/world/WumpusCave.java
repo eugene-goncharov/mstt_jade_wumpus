@@ -25,17 +25,17 @@ public class WumpusCave {
 
         this.map.put(new Position(2, 1), new Room(RoomContent.STENCH));
         this.map.put(new Position(2, 2), new Room(RoomContent.EMTPY));
-        this.map.put(new Position(2, 3), new Room(RoomContent.BREEZE));
+        this.map.put(new Position(2, 3), new Room(RoomContent.EMTPY));
         this.map.put(new Position(2, 4), new Room(RoomContent.EMTPY));
 
-        this.map.put(new Position(3, 1), new Room(RoomContent.WUMPUS));
+        this.map.put(new Position(3, 1), new Room(RoomContent.EMTPY));
         this.map.put(new Position(3, 2), new Room(RoomContent.STENCH));
-        this.map.put(new Position(3, 3), new Room(RoomContent.EMTPY));
+        this.map.put(new Position(3, 3), new Room(RoomContent.WUMPUS));
         this.map.put(new Position(3, 4), new Room(RoomContent.BREEZE));
 
         this.map.put(new Position(4, 1), new Room(RoomContent.STENCH));
         this.map.put(new Position(4, 2), new Room(RoomContent.EMTPY));
-        this.map.put(new Position(4, 3), new Room(RoomContent.BREEZE));
+        this.map.put(new Position(4, 3), new Room(RoomContent.GOLD));
         this.map.put(new Position(4, 4), new Room(RoomContent.PIT));
     }
 
@@ -75,5 +75,9 @@ public class WumpusCave {
 
     public void shootWumpus() {
         this.wumpusAlive = false;
+    }
+
+    public boolean isWumpusAlive() {
+        return wumpusAlive;
     }
 }

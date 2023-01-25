@@ -25,7 +25,10 @@ public class SpeleologistAgent extends Agent {
         addBehaviour(new TickerBehaviour(this, 5000) {
             @Override
             protected void onTick() {
-
+                if (wumpusWorld != null) {
+                    stop();
+                    return;
+                }
                 myAgent.addBehaviour(new ConnectWithWumpusWorld(agent));
             }
         });

@@ -4,37 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c6d29fa-215c-4366-b96c-6bc0913880d8" name="Changes" comment="Working on wumpus core game loop and navigation">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/mstt_labs_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSTT_labs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/ActionType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/Climb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/navigator/NavigatorBehaviour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/speleologist/CommunicationWithNavigationAgent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/speleologist/CommunicationWithWumpusWorldAgent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/speleologist/ConnectWithNavigator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/speleologist/ConnectWithWumpusWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/world/WorldToSpeleologistCommunication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/world/WumpusGameInformationBehaviour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/configs/NavigatorMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/configs/SpeleologistMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/parsers/NavigatorMessageParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/parsers/SpeleologistMessageParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/world/Percept.java" afterDir="false" />
+    <list default="true" id="9c6d29fa-215c-4366-b96c-6bc0913880d8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mstt_labs_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/Actions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/GrabItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/GrabItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/MoveForward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/MoveForward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/Shoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/Shoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/TurnLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/TurnLeft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/TurnRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/TurnRight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/agents/NavigatorAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/agents/NavigatorAgent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/agents/SpeleologistAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/agents/SpeleologistAgent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/agents/WumpusWorldAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/agents/WumpusWorldAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/WumpusWorldCoreGameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/world/WumpusWorldCoreGameLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/navigator/NavigatorBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/navigator/NavigatorBehaviour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/speleologist/CommunicationWithWumpusWorldAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/speleologist/CommunicationWithWumpusWorldAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/speleologist/ConnectWithWumpusWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/speleologist/ConnectWithWumpusWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/world/WumpusWorldCoreGameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/world/WumpusWorldCoreGameLoop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/configs/MessagesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/configs/MessagesConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/configs/WorldConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/configs/WorldConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/configs/NavigatorMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/configs/NavigatorMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/world/Percept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/world/Percept.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/world/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/world/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/world/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/world/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/world/WumpusCave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/world/WumpusCave.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,9 +61,14 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
+    "project.structure.proportion": "0.1563786",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -87,7 +79,7 @@
       <recent name="ua.nure.mstt_labs.wumpus.actions" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Boot">
+  <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -98,15 +90,10 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration name="Boot" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <classpathModifications>
-        <entry path="$PROJECT_DIR$/out/artifacts/mstt_labs_jar/mstt_labs.jar" />
-      </classpathModifications>
+    <configuration name="BootApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="jade.Boot" />
       <module name="mstt_labs" />
-      <option name="PROGRAM_PARAMETERS" value="-agents -agents world:ua.nure.mstt_labs.wumpus.agents.WumpusWorldAgent\;navigator:ua.nure.mstt_labs.wumpus.agents.NavigatorAgent\;speleologist:ua.nure.mstt_labs.wumpus.agents.SpeleologistAgent" />
+      <option name="PROGRAM_PARAMETERS" value="-agents world:ua.nure.mstt_labs.wumpus.agents.WumpusWorldAgent;navigator:ua.nure.mstt_labs.wumpus.agents.NavigatorAgent;speleologist:ua.nure.mstt_labs.wumpus.agents.SpeleologistAgent" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,11 +113,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Jade" type="JarApplication">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2" />
     </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
@@ -153,10 +135,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Boot" />
-      <item itemvalue="JAR Application.Jade" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -170,7 +148,7 @@
       <workItem from="1674490806382" duration="5330000" />
       <workItem from="1674500714707" duration="44000" />
       <workItem from="1674502383372" duration="663000" />
-      <workItem from="1674554138725" duration="22559000" />
+      <workItem from="1674554138725" duration="29832000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;Simple Buyer agent setup">
       <created>1674490884844</created>
@@ -235,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674646514010</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finishing wumpus world implementation. Before bugfixing and testing">
+      <created>1674656917919</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674656917919</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +236,83 @@
     <MESSAGE value="Minor refactorings, working on wumpus cave basics" />
     <MESSAGE value="Working on wumpus core game loop and navigation" />
     <MESSAGE value="Working on agent actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on agent actions" />
+    <MESSAGE value="Finishing wumpus world implementation. Before bugfixing and testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishing wumpus world implementation. Before bugfixing and testing" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/world/WumpusWorldCoreGameLoop.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/speleologist/CommunicationWithNavigationAgent.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/world/WumpusWorldCoreGameLoop.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/Shoot.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/MoveForward.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/TurnLeft.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/actions/TurnRight.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/navigator/NavigatorBehaviour.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/navigator/NavigatorBehaviour.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/navigator/NavigatorBehaviour.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/navigator/NavigatorBehaviour.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/navigator/NavigatorBehaviour.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/navigator/NavigatorBehaviour.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/nure/mstt_labs/wumpus/behaviours/navigator/NavigatorBehaviour.java</url>
+          <line>123</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
