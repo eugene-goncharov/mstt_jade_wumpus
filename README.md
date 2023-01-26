@@ -1,6 +1,6 @@
-# JADE Book Trading
+# JADE-Wumpus-World
 
-This project represents the "Book Trading" example implementation from [JADE Programming Tutorial for Beginners](https://jade.tilab.com/doc/tutorials/JADEProgramming-Tutorial-for-beginners.pdf).
+This project represents a solution for the "Wumpus World" problem. The solution is implemented using the approach with multi-agent communication implemented using the JADE framework.
 
 ## Prerequisites
 
